@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import theme from "../../theme";
 
 const applyTheme = ({ ghost, theme: { colors } }) => {
   const ButtonDefault = css`
@@ -20,7 +21,7 @@ export const Button = styled.button`
   padding: 12px 26px;
   font-weight: bold;
   opacity: 1;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   &:hover,
   &:focus {
     opacity: 0.5;

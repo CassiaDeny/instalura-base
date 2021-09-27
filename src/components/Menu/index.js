@@ -2,6 +2,7 @@ import React from "react";
 import { MenuWrapper } from "./styles/MenuWrapper";
 import { Logo } from "../../theme/Logo";
 import { Button } from "../Button";
+import TextBase from "../Text";
 
 const links = [
   { texto: "Home", url: "/" },
@@ -19,7 +20,9 @@ export default function Menu(props) {
         {links.map((link) => {
           return (
             <li key={link.url}>
-              <a href={link.url}>{link.texto}</a>
+              <TextBase variant="smallestException" tag="a">
+                {link.texto}
+              </TextBase>
             </li>
           );
         })}
