@@ -15,10 +15,10 @@ export default function App({ Component, pageProps }) {
           rel="stylesheet"
         ></link>
       </Head>
-      <ThemePr ovider theme={theme}>
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Component {...pageProps} />
-      </ThemePr>
+      </ThemeProvider>
     </>
   );
 }
