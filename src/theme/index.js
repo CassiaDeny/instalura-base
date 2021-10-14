@@ -5,6 +5,6 @@ export default {
   colors,
   borderRadius: "8px",
   transition: "200 ease-in-out",
-  fontFamily: "'Rubic', sans/-serif",
+  fontFamily: "'Rubik', sans-serif",
   typographyVariants,
 };
