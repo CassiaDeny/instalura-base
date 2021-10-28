@@ -1,22 +1,18 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
+import { propToStyle } from "../../theme/utils/propToStyle";
 
 const TextBase = styled.span`
   ${({ variant, theme }) => {
-    const typoTheme = theme.typographyVariants[variant];
-
-    return css`
-      font-size: ${typoTheme.fontSize};
-      font-weight: ${typoTheme.fontWeight};
-      line-height: ${typoTheme.lineHeight};
-    `;
+    return theme.typographyVariants[variant];
   }}
-`;
 
-export default function Text({ tag, variant, children }) {
+  ${propToStyle("textAlign")}
+`;
+export default function Text({ tag, variant, children, ...props }) {
   return (
-    <TextBase variant={variant} as={tag}>
+    <TextBase variant={variant} as={tag} {...props}>
       {children}
     </TextBase>
   );

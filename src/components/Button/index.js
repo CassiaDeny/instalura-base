@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { typographyVariants } from "../../theme/Typografy";
-import { breakpointsMedia } from "../../theme/BreakPoints";
+import { breakpointsMedia } from "../../theme/utils/breakpointsMedia";
+import { propToStyle } from "../../theme/utils/propToStyle";
 
 const applyChangesByType = ({ ghost, theme: { colors } }) => {
   const ButtonDefault = css`
@@ -29,7 +30,8 @@ export const Button = styled.button`
   }
 
   ${applyChangesByType}
-
+  ${propToStyle("margin")}
+  ${propToStyle("display")}
   ${breakpointsMedia({
     xs: css`
       ${typographyVariants.smallestException}
